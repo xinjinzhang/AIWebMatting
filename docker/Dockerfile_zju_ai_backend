@@ -8,6 +8,8 @@ RUN apt-get update \
         cmake libsm6 libxext6 libxrender-dev protobuf-compiler \
     && rm -r /var/lib/apt/lists/*
 
+RUN apt-get update && apt-get install -y libgl1-mesa-glx
+
 COPY algorithm/requirements.txt algorithm/requirements.txt
 COPY backend/requirements.txt backend/requirements.txt
 RUN pip install --upgrade pip setuptools wheel -i https://mirrors.aliyun.com/pypi/simple/
