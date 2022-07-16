@@ -47,7 +47,7 @@ function AddBackground() {
         formData.append("file", $("#addBackground")[0].files[0]);
         formData.append("fg_path", $("#imageReturn2").attr("src"));
         $.ajax({
-            url: "http://matting.zsyhh.com:4800/api/v1/synthesis",
+            url: "/api/v1/synthesis",
             type: 'POST',
             data: formData,
             processData: false,

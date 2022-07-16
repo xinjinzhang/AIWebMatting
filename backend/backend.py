@@ -41,7 +41,7 @@ def upload():
 
     return json.dumps({
         "status": True,
-        "data": "http://matting.zsyhh.com:4800/download/{}".format(filename)
+        "data": "/download/{}".format(filename)
     })
 
 
@@ -55,7 +55,7 @@ def synthesis():
     if not fg_path:
         return make_status_false("invalid_params")
 
-    base_url = "http://matting.zsyhh.com:4800/download"
+    base_url = "/download"
     fg_filename = fg_path[len(base_url) + 1:]
     if not fg_filename:
         return make_status_false("invalid_params")
@@ -70,7 +70,7 @@ def synthesis():
 
     return json.dumps({
         "status": True,
-        "data": "http://matting.zsyhh.com:4800/download/{}".format(output_filename)
+        "data": "/download/{}".format(output_filename)
     })
 
 
