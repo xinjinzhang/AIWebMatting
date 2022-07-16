@@ -86,7 +86,7 @@ function Matting() {
         var formData = new FormData();
         formData.append("file", $("#upload")[0].files[0]);
         $.ajax({
-            url: "http://matting.zsyhh.com:4800/api/v1/upload",
+            url: "/api/v1/upload",
             type: 'POST',
             data: formData,
             processData: false,
